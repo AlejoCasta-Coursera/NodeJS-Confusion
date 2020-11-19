@@ -12,7 +12,8 @@ const promoRouter = require('./routes/promotionRouter');
 const leaderRouter = require('./routes/leaderRouter');
 
 const Dishes = require('./models/dishes');
-
+const Leaders = require('./models/leaders');
+const Promotions = require('./models/promotions');
 
 const url = 'mongodb://localhost:27017/conFusion';
 const connect = mongoose.connect(url);
@@ -38,7 +39,6 @@ app.use('/users', usersRouter);
 app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);
 app.use('/leaders', leaderRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
